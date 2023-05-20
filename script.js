@@ -6,7 +6,7 @@ const l = {
     'You must allow me to read your clipboard': 'Você deve permitir acesso à área de transferência',
     'Since you are here, why not paste another one?': 'Já que você está aqui, porque não cola mais um?',
     "(right click the link and select 'save link as')": "(clique com o botão direito no botão e selecione 'salvar link como')",
-    "(touch-and-hold the link and select 'save link as')": "(segure o dedo no botão e selecione 'salvar link como')"
+    "(touch-and-hold the link and select 'save link as')": "(segure o dedo no botão e selecione 'salvar link como')",
     'You must paste a youtube url': 'Você deve colar um link do youtube',
     'Watch': 'Assistir',
     'or click here': 'ou clique aqui',
