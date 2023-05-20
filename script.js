@@ -49,7 +49,7 @@ async function runrun(video) {
   } else {
     canPaste = false;
     stepOne.classList.add('hide');
-    const dlink = await fetch(`http://164.92.224.50/?url=${video}`);
+    const dlink = await fetch(`https://yt.esta.la/?url=${video}`);
     const data = await dlink.json();
     btn.href = data.link;
     stepTwo.classList.add('hide');
