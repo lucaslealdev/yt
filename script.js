@@ -74,4 +74,4 @@ async function pasteVideo() {
   }
 }
 
-const isYtLink = (link) => true && link.match(/^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/);
+const isYtLink = (link) => true && link.match(/(youtube\.com|youtu\.be)/) && link.match(/^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/);
