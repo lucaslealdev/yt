@@ -4,6 +4,7 @@
   --dark: #8f0404;
 }
 
+html,
 body {
   color: var(--dark);
   -webkit-user-select: none;
@@ -11,6 +12,14 @@ body {
       -ms-user-select: none;
           user-select: none;
   overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
 }
 
 #stepTwo #emails {
@@ -24,7 +33,9 @@ body {
   opacity: 0.6;
 }
 
-#stepOne, #stepTwo, #stepThree {
+#stepOne,
+#stepTwo,
+#stepThree {
   transition: opacity 300ms ease;
   position: absolute;
   top: 0px;
@@ -41,14 +52,20 @@ body {
   justify-content: center;
   overflow: hidden;
 }
-#stepOne.hide, #stepTwo.hide, #stepThree.hide {
+#stepOne.hide,
+#stepTwo.hide,
+#stepThree.hide {
   opacity: 0;
   pointer-events: none;
 }
-#stepOne > *, #stepTwo > *, #stepThree > * {
+#stepOne > *,
+#stepTwo > *,
+#stepThree > * {
   position: relative;
 }
-#stepOne img, #stepTwo img, #stepThree img {
+#stepOne img,
+#stepTwo img,
+#stepThree img {
   position: absolute;
   left: -40%;
   width: 130%;
@@ -59,7 +76,8 @@ body {
   pointer-events: none;
 }
 
-#btn, #or {
+#btn,
+#or {
   margin-bottom: 15px;
   padding: 8px 10px;
   background: rgb(177, 0, 0);
@@ -129,10 +147,10 @@ user-message {
   padding: 20px 40px;
   transform: translateX(101%);
   transition: transform 300ms ease;
-  min-width: 315px;
   border: 3px solid rgb(177, 0, 0);
   border-radius: 10px 0px 0px 10px;
   padding-right: 110px;
+  max-width: 50vw;
 }
 user-message::before {
   content: "❌";
