@@ -8,6 +8,7 @@ const l = {
     "(right click the link and select 'save link as')": "(clique com o botão direito no botão e selecione 'salvar link como')",
     "(touch-and-hold the link and select 'save link as')": "(segure o dedo no botão e selecione 'salvar link como')",
     'You must paste a youtube url': 'Você deve colar um link do youtube',
+    'It was not possible to download this video, try another one :(': 'Não foi possível baixar esse vídeo, tente outro :(',
     'Watch': 'Assistir',
     'or click here': 'ou clique aqui',
     'Your download is starting! Why not paste another one?': 'Seu download está começando! Não quer colar mais um?',
@@ -52,8 +53,13 @@ async function runrun(video) {
     stepOne.classList.add('hide');
     const dlink = await fetch(`https://yt.esta.la/?url=${video}`);
     const data = await dlink.json();
-    btn.href = data.link;
-    stepTwo.classList.add('hide');
+    if (data.success) {
+      btn.href = data.link;
+      stepTwo.classList.add('hide');
+    } else {
+      stepOne.classList.remove('hide');
+      message(getL(data.message))
+    }
     canPaste = true;
   }
 }
