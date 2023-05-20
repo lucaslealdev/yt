@@ -66,14 +66,7 @@ async function runrun(video) {
 
 async function pasteVideo() {
   try {
-    const permission = await navigator.permissions.query({
-      name: "clipboard-read",
-    });
-    if (permission.state === "denied") {
-      message(getL("You must allow me to read your clipboard"));
-    }
     const clipboardContents = await navigator.clipboard.readText();
-    console.log(clipboardContents);
     runrun(clipboardContents);
   } catch (error) {
     message(error.message);
