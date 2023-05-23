@@ -35,7 +35,7 @@ const message = (text) => {
   timer = setTimeout(() => messageElement.classList.remove('shown'), 3000);
 };
 
-document.addEventListener('paste', async (e) => {
+document.addEventListener('paste', (e) => {
   e.preventDefault();
   if (!canPaste) return false;
   stepOne.classList.remove('hide');
